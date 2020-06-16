@@ -11,6 +11,7 @@
 
     <modules>
         <module>lab03/lab03-server</module>
+        <module>lab03/lab03-client</module>
     </modules>
 
 </project>
