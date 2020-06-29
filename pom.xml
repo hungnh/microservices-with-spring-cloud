@@ -12,6 +12,13 @@
     <modules>
         <module>lab03/lab03-server</module>
         <module>lab03/lab03-client</module>
+        <module>lab04/lab04-eureka-server</module>
+        <module>lab04/lab04-adjective</module>
+        <module>lab04/lab04-article</module>
+        <module>lab04/lab04-noun</module>
+        <module>lab04/lab04-subject</module>
+        <module>lab04/lab04-verb</module>
+        <module>lab04/lab04-sentence</module>
     </modules>
 
 </project>
