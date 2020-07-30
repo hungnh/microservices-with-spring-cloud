@@ -13,6 +13,9 @@ public class WordController {
     public String getWord() {
         String[] wordArray = words.split(",");
         int i = (int) Math.round(Math.random() * (wordArray.length - 1));
+
+        System.out.println("Generated Word: " + wordArray[i]);
+
         return wordArray[i];
     }
 }

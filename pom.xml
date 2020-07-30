@@ -21,6 +21,7 @@
         <module>lab04/lab04-verb</module>
         <module>lab04/lab04-sentence</module>
         <module>lab05/lab05-word</module>
+        <module>lab05/lab05-sentence</module>
     </modules>
 
 </project>
