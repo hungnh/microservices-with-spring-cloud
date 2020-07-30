@@ -10,9 +10,10 @@
     <packaging>pom</packaging>
 
     <modules>
+        <module>common/centralized-configuration-server</module>
+        <module>common/eureka-server</module>
         <module>lab03/lab03-server</module>
         <module>lab03/lab03-client</module>
-        <module>lab04/lab04-eureka-server</module>
         <module>lab04/lab04-adjective</module>
         <module>lab04/lab04-article</module>
         <module>lab04/lab04-noun</module>
