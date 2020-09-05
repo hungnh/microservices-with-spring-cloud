@@ -1,4 +1,4 @@
-package uet.hungnh.microservicewithspring.lab05sentence.client;
+package uet.hungnh.microservicewithspring.lab05sentence.constants;
 
 public interface ClientId {
     String SUBJECT = "SUBJECT";

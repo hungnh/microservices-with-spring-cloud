@@ -1,7 +1,8 @@
 package uet.hungnh.microservicewithspring.lab05sentence.service;
 
 import org.springframework.stereotype.Service;
-import uet.hungnh.microservicewithspring.lab05sentence.client.*;
+import uet.hungnh.microservicewithspring.lab05sentence.constants.WordType;
+import uet.hungnh.microservicewithspring.lab05sentence.service.word.WordServiceManager;
 
 /**
  * Build a sentence by assembling randomly generated subjects, verbs,
@@ -11,22 +12,10 @@ import uet.hungnh.microservicewithspring.lab05sentence.client.*;
 @Service
 public class SentenceServiceImpl implements SentenceService {
 
-    private final VerbClient verbClient;
-    private final SubjectClient subjectClient;
-    private final ArticleClient articleClient;
-    private final AdjectiveClient adjectiveClient;
-    private final NounClient nounClient;
+    private final WordServiceManager wordService;
 
-    public SentenceServiceImpl(VerbClient verbClient,
-                               SubjectClient subjectClient,
-                               ArticleClient articleClient,
-                               AdjectiveClient adjectiveClient,
-                               NounClient nounClient) {
-        this.verbClient = verbClient;
-        this.subjectClient = subjectClient;
-        this.articleClient = articleClient;
-        this.adjectiveClient = adjectiveClient;
-        this.nounClient = nounClient;
+    public SentenceServiceImpl(WordServiceManager wordService) {
+        this.wordService = wordService;
     }
 
     /**
@@ -34,10 +23,10 @@ public class SentenceServiceImpl implements SentenceService {
      */
     public String buildSentence() {
         return String.format("%s %s %s %s %s.",
-                subjectClient.getWord().getString(),
-                verbClient.getWord().getString(),
-                articleClient.getWord().getString(),
-                adjectiveClient.getWord().getString(),
-                nounClient.getWord().getString());
+                wordService.getWord(WordType.SUBJECT).getString(),
+                wordService.getWord(WordType.VERB).getString(),
+                wordService.getWord(WordType.ARTICLE).getString(),
+                wordService.getWord(WordType.ADJECTIVE).getString(),
+                wordService.getWord(WordType.NOUN).getString());
     }
 }
