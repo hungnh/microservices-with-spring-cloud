@@ -9,3 +9,10 @@ spring:
     port: 5672
     username: admin
     password: 123qweasd
+
+# This controls which Actuator web endpoints are exposed.
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,info,refresh,bus-refresh
