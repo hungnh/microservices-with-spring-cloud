@@ -1,4 +1,4 @@
 ---
 wordConfig:
-  preamble: My lucky word
-  luckyWord: Jon Snow
+  preamble: My lucky word is
+  luckyWord: Jon
